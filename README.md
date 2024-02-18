@@ -30,6 +30,7 @@ echo "shared_preload_libraries = 'citus'" >> worker2/postgresql.conf
 ```
 
 ```
+cd /workspace/nodes
 pg_ctl -D coordinator -o "-p 9700" -l coordinator_logfile start
 pg_ctl -D worker1 -o "-p 9701" -l worker1_logfile start
 pg_ctl -D worker2 -o "-p 9702" -l worker2_logfile start
