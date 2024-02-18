@@ -1,2 +1,2 @@
 image:
-    file: .gitpod.Dockerfile
+    image: registry.hub.docker.com/EugeneLoy/citus-test
