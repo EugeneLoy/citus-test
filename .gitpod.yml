@@ -1,2 +1,2 @@
 image:
-    image: registry.hub.docker.com/EugeneLoy/citus-test
+    image: EugeneLoy/citus-test
