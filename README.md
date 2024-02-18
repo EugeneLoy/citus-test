@@ -4,6 +4,11 @@ sudo apt-get -y install postgresql-16-citus-12.1
 ```
 
 ```
+mkdir /workspace/nodes
+sudo chmod a+rwx /workspace/nodes
+```
+
+```
 sudo su - postgres
 export PATH=$PATH:/usr/lib/postgresql/16/bin
 ```
