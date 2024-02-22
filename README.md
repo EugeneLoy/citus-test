@@ -90,7 +90,7 @@ psql -h 127.0.0.1 -p 9700 -U postgres -c "SELECT * from citus_add_node('127.0.0.
 psql -h 127.0.0.1 -p 9700 -U postgres -c "SELECT * FROM citus_get_active_worker_nodes();"
 ```
 
-# Запуск Citus кластера Після перезапуску робочого простору
+# Запуск Citus кластера після перезапуску робочого простору
 
 У терміналі робочого простору виконайте наступні дії:
 
