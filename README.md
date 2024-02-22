@@ -1,3 +1,5 @@
+# Створення робочого простору Gitpod
+
 Створіть або увійдіть у обліковий запис [Github](https://github.com/) та перейдіть на сторінку репозиторія: https://github.com/EugeneLoy/citus-test [TODO]
 
 Створіть "fork" репозиторія.
@@ -19,7 +21,9 @@
 
 [TODO] розписати особливості gitpod
 
-У вікні терміналу виконайте наступні дії:
+# Початковоа конфігурація Citus кластера
+
+У терміналі робочого простору виконайте наступні дії:
 
 [TODO] це можна пропустити:
 
@@ -84,4 +88,22 @@ psql -h 127.0.0.1 -p 9700 -U postgres -c "SELECT * from citus_add_node('127.0.0.
 [TODO] розписати детальніше
 ```
 psql -h 127.0.0.1 -p 9700 -U postgres -c "SELECT * FROM citus_get_active_worker_nodes();"
+```
+
+# Запуск Citus кластера Після перезапуску робочого простору
+
+У терміналі робочого простору виконайте наступні дії:
+
+Переключітся на користувача `postgres`:
+```
+sudo su - postgres
+export PATH=$PATH:/usr/lib/postgresql/16/bin
+```
+
+Запустіть екземпляри PostgreSQL (координатор на порту `9700`, робочі на портах `9701` та `9702`):
+```
+cd /workspace/nodes
+pg_ctl -D coordinator -o "-p 9700" -l coordinator_logfile start
+pg_ctl -D worker1 -o "-p 9701" -l worker1_logfile start
+pg_ctl -D worker2 -o "-p 9702" -l worker2_logfile start
 ```
