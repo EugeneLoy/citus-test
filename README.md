@@ -63,7 +63,7 @@ initdb -D worker2
 echo "shared_preload_libraries = 'citus'" >> worker2/postgresql.conf
 ```
 
-Запустіть екземпляри PostgreSQL (координатор на порту `9700`, робочі на портах `9701` та `9702`):
+Запустіть екземпляри PostgreSQL (координатор на порті `9700`, робочі на портах `9701` та `9702`):
 ```
 cd /workspace/nodes
 pg_ctl -D coordinator -o "-p 9700" -l coordinator_logfile start
@@ -100,7 +100,7 @@ sudo su - postgres
 export PATH=$PATH:/usr/lib/postgresql/16/bin
 ```
 
-Запустіть екземпляри PostgreSQL (координатор на порту `9700`, робочі на портах `9701` та `9702`):
+Запустіть екземпляри PostgreSQL (координатор на порті `9700`, робочі на портах `9701` та `9702`):
 ```
 cd /workspace/nodes
 pg_ctl -D coordinator -o "-p 9700" -l coordinator_logfile start
